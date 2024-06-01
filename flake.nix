@@ -25,7 +25,8 @@
         };
       }) // {
         nixosModules = rec {
-          cl-gemini = import ./module.nix;
+          cl-gemini =
+            import ./module.nix { inherit (lisp-repo.lib) lispSourceRegistry; };
           default = cl-gemini;
         };
       };

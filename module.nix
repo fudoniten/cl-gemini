@@ -1,12 +1,10 @@
-{ lisp-repo }:
+{ lispSourceRegistry }:
 
 { config, lib, pkgs, ... }:
 
 with lib;
 let
   cfg = config.informis.cl-gemini;
-
-  inherit (lisp-repo.lib) lispSourceRegistry;
 
   feedOpts = { ... }: {
     options = with types; {
