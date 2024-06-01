@@ -115,7 +115,7 @@ in {
       description =
         "cl-gemini Gemini server (https://gemini.curcumlunar.space/).";
 
-      path = [ cl-gemini-launcher ];
+      path = [ cl-gemini-launcher gcc file getent ];
 
       serviceConfig = let
         genKeyCommand = { hostname, key, certs, ... }:
@@ -170,8 +170,6 @@ in {
 
         CL_SOURCE_REGISTRY = lispSourceRegistry cl-gemini;
       };
-
-      path = [ gcc file getent ];
 
       wantedBy = [ "multi-user.target" ];
     };
