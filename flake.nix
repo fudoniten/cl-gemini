@@ -2,11 +2,11 @@
   description = "Common Lisp Gemini server.";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-22.05";
+    nixpkgs.url = "nixpkgs/nixos-23.11";
     utils.url = "github:numtide/flake-utils";
-    lisp-repo.url = "git+https://fudo.dev/public/lisp-repository.git";
+    lisp-repo.url = "github:fudoniten/nix-lisp-packages";
     cl-gemini = {
-      url = "git+https://fudo.dev/informis/cl-gemini.git";
+      url = "github:fudoniten/cl-gemini";
       flake = false;
     };
   };
